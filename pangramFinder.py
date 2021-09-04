@@ -46,7 +46,7 @@ def createDictionary(numletters,inputdictionary="words_alpha.txt"):
 
 def main():
 	#store input word as searchword
-	searchword=sys.argv[1]
+	searchword=sys.argv[1].lower()
 	#save list of pangrams to pangramlist
 	pangramlist=findPangrams(searchword,createDictionary(numletters=len(set(searchword))))
 	#print pangrams separated by newlines
